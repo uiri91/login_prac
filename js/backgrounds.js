@@ -1,11 +1,23 @@
-const images = [
-	"0.jpg", "1.jpg", "2.jpg", "3.jpg", "4.jpg", "5.jpg"
-]
+const body = document.querySelector("body");
 
-const chosenImage = images[Math.floor(Math.random() * images.length)]
+const IMG_NUMBER = 4;
 
-const bgImage = document.createElement("img")
+function paintImage(imgNumber) {
+  const image = new Image();
+  image.src = `img/${imgNumber + 1}.jpg`;
+  image.classList.add("bgImage");
+  body.appendChild(image)
+}
 
-bgImage.src = `img/${chosenImage}`
+function genRandom() {
+  // 랜덤 넘버 생성
+  const number = Math.floor(Math.random() * IMG_NUMBER);
+  return number;
+}
 
-document.body.appendChild(bgImage)
+function init() {
+  const randomNumber = genRandom();
+  paintImage(randomNumber);
+}
+
+init();

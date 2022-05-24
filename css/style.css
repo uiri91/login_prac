@@ -1,3 +1,28 @@
 .hidden {
   display: none;
+  justify-content: center;
+  width: 100%;
+  margin-top: 15%;
+  margin-bottom: 15px;
+}
+
+img {
+  position:absolute;
+  width:100%;
+  height:100%;
+  left: 0px;
+  top: 0px;
+  right:0px;
+  bottom:0px;
+  z-index: -1;
+  opacity:80%;
+}
+
+#clock {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin-top: 15%;
+  margin-bottom: 15px;
+  font-size: 80px;
 }
